@@ -1,0 +1,158 @@
+/* Variáveis de cores e gradientes roxas */
+:root {
+    --purple-primary: #6f42c1;
+    --purple-dark: #4c2882;
+    --purple-gradient: linear-gradient(135deg, #6f42c1 0%, #a100ff 100%);
+    --bg-light: #f8f6fc;
+    --card-shadow: 0 10px 30px rgba(111, 66, 193, 0.1);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Estilos gerais da página */
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light) !important;
+    color: #332d3b;
+    line-height: 1.7;
+}
+
+/* Configuração dos títulos */
+h1,
+h2,
+h3,
+h4,
+h1.display-5 {
+    font-family: var(--font-heading) !important;
+    letter-spacing: -0.5px;
+}
+
+/* Cor roxa nos títulos da página */
+.text-primary,
+h2.text-primary {
+    color: var(--purple-primary) !important;
+}
+
+/* Cabeçalho */
+header {
+    background: #ffffff !important;
+    border-bottom: 3px solid var(--purple-primary);
+}
+
+header h1 {
+    background: var(--purple-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Mascote */
+.mascote {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+    background: var(--purple-gradient);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.mascote:hover {
+    transform: scale(1.05);
+}
+
+/* Cards */
+.shadow-sm {
+    box-shadow: var(--card-shadow) !important;
+    border: 1px solid rgba(111, 66, 193, 0.1) !important;
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-sm:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(111, 66, 193, 0.15) !important;
+}
+
+/* Imagens dos sites */
+.img-site {
+    border-radius: 12px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.img-site:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 10px 20px rgba(111, 66, 193, 0.25) !important;
+}
+
+/* Tabela */
+.table-responsive {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-primary {
+    background: var(--purple-gradient) !important;
+    color: #ffffff !important;
+}
+
+.table-primary th {
+    font-family: var(--font-heading);
+    color: #ffffff !important;
+    border: none;
+    padding: 14px 16px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: rgba(111, 66, 193, 0.04);
+}
+
+.table-hover>tbody>tr:hover>* {
+    background-color: rgba(111, 66, 193, 0.08);
+}
+
+/* Rodapé*/
+footer {
+    background-color: #ffffff !important;
+    border-top: 1px solid rgba(111, 66, 193, 0.1) !important;
+}
+
+
+/* Media Queries para Responsividade */
+
+/* Estilos aplicados especificamente em ecrãs pequenos (Celulares: até 576px) */
+@media (max-width: 576px) {
+
+    /* Diminui a foto de perfil no celular */
+    .mascote {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Ajusta a largura das imagens dos sites no celular */
+    .img-site {
+        width: 110px;
+    }
+
+    /* Reduz o tamanho da fonte da tabela no celular */
+    .table {
+        font-size: 0.875rem;
+    }
+
+    /* Reduz o tamanho do título principal em ecrãs pequenos */
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    /* Ajusta o espaçamento interno das caixas no celular */
+    .p-4 {
+        padding: 1.25rem !important;
+    }
+}
